@@ -6,29 +6,68 @@
     <title>Exemplo 04</title>
     <link rel="stylesheet" href="estilo.css">
     <style>
-        header, footer{
+        header{
             background-color: aquamarine
         }
+
+        footer {
+            background-color: pink;
+        }
+
         section{
             background-color: antiqueWhite;
         }
 
-        .pancake-stack{
-            display: grid;
-            grid-template-rows: auto 1fr auto;
+        nav {
+            background-color: lightgreen;
         }
 
-        .pancake-stack > section {
+        aside{
+            background-color: cornsilk;
+        }
+
+        li{
+            border: 1px solid blue;
+            background-color: lightblue;
+            padding: 0.1em;
+        }
+
+        .holy-grail{
+            display: grid;
+            grid-template-columns: minmax(100px, 20%) 1fr minmax(100px, 20%);
+            grid-template-rows: auto 1fr auto;
+            gap: 10px;
+        }
+
+        .holy-grail > header {
+            grid-column: 1 / 4;
+        }
+
+        .holy-grail > footer {
+            grid-column: 1 / 4;
+        }
+
+        .holy-grail > section {
             overflow-y: auto;
         }
     </style>
 </head>
 <body>
     <main>
-        <article class="pancake-stack">
+        <article >
             <header>
-                <h1>Exemplo 04: Pancake Stack</h1>
+                <h1>Exemplo 05: Holy Grail</h1>
             </header>
+                <nav>
+                    <ul>
+                        <li> Primeiro </li>
+                        <li> Segundo  </li>
+                        <li> Terceiro </li>
+                        <li> Quarto   </li>
+                        <li> Quinto   </li>
+                    </ul>
+                </nav>
+            </article>
         <section>
             <h2>Texto</h2>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus, vel assumenda impedit veniam dolorum nesciunt recusandae quae, quod voluptates dignissimos ab quisquam provident, eaque voluptas aliquam. At nobis maiores eius!</p>
